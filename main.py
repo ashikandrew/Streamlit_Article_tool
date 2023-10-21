@@ -7,7 +7,8 @@ from langchain import OpenAI
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.chains.qa_with_sources.loading import load_qa_with_sources_chain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.document_loaders import SeleniumURLLoader
+# from langchain.document_loaders import SeleniumURLLoader
+from langchain.document_loaders import UnstructuredURLLoader
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
@@ -27,14 +28,14 @@ process_url_clicked=st.sidebar.button("Process URL")
 file_path="faiss_store_openai.pkl"
 
 main_placefolder=st.empty()
-llm = OpenAI(temperature=0.9, max_tokens=500)
+llm = OpenAI(temperature=0.9, max_tokens=100)
 
 
 
 
 if process_url_clicked:
     #load_data
-    loader = SeleniumURLLoader(urls=urls)
+    loader = UnstructuredURLLoader(urls=urls)
     main_placefolder.text("Data loading... started..✅✅✅")
     data=loader.load()
     #split_data
