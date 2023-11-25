@@ -44,7 +44,7 @@ Contributions to the project are welcome. Please follow these guidelines:
 Fork the project repository.
 Create a new branch for your changes.
 Make your changes to the code.
-Add tests for your changes.
+Add tests for your changes. 
 Submit a pull request to the main branch.
 License
 The project is licensed under the MIT License.
