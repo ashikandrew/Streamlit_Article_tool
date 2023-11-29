@@ -11,7 +11,7 @@ To use the application, follow these steps:
 
 3.Run the application using streamlit run app.py.
 
-4.Enter the URLs of the articles you want to research 
+4.Enter the URLs of the articles you want to research.
 
 5.in the "ARTICLE URLs" section of the sidebar.
 
